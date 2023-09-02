@@ -262,7 +262,7 @@ Spreadsheet Spreadsheet::operator+(const Spreadsheet& obj) const {
             *tmp.getCell(i, j) = *obj.getCell(k, j);
         }
     }
-    return std::move(tmp);
+    return tmp;
 }
 
 SpreadsheetCell Spreadsheet::operator[](const Point& point) const {

@@ -53,7 +53,7 @@ int main() {
     std::cout << sp2 << std::endl;
     Spreadsheet sp3 = sp1 + sp2;
     //Spreadsheet sp3 = sp1 + sp2;
-    std::cout << sp1;
+    std::cout << sp3;
     return 0;
 }
 
