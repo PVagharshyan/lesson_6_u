@@ -46,10 +46,12 @@ int main() {
     Spreadsheet sp1;
     sp1.addColumn(2);
     sp1.addRow(3);
+    sp1.getCell(0, 0)->setValue("Hello");
     std::cout << sp1 << std::endl;
     Spreadsheet sp2;
     sp2.addColumn(3);
     sp2.addRow(2);
+    sp2.getCell(1, 1)->setValue("3.14");
     std::cout << sp2 << std::endl;
     Spreadsheet sp3 = sp1 + sp2;
     //Spreadsheet sp3 = sp1 + sp2;
