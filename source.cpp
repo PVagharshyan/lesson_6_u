@@ -3,8 +3,10 @@
 
 #include <cstddef>
 #include <iostream>
+#include <ostream>
 
 std::ostream& operator<<(std::ostream&, const Spreadsheet::Point&);
+std::ostream& operator<<(std::ostream&, const SpreadsheetCell&);
 std::ostream& operator<<(std::ostream&, const Spreadsheet&);
 
 int main() {
@@ -54,7 +56,6 @@ int main() {
     sp2.getCell(1, 1)->setValue("3.14");
     std::cout << sp2 << std::endl;
     Spreadsheet sp3 = sp1 + sp2;
-    //Spreadsheet sp3 = sp1 + sp2;
     std::cout << sp3;
     return 0;
 }
@@ -90,5 +91,10 @@ std::ostream& operator<<(std::ostream& out, const Spreadsheet& obj) {
         std::cout << "-";
     }
     std::cout << std::endl;
+    return out;
+}
+
+std::ostream& operator<<(std::ostream& out, const SpreadsheetCell& obj) {
+    out << obj.getValue() << std::endl;
     return out;
 }

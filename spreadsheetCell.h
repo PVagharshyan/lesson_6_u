@@ -12,6 +12,8 @@ public:
     SpreadsheetCell& operator=(const SpreadsheetCell&);
     SpreadsheetCell& operator=(SpreadsheetCell&&);
     bool operator==(const SpreadsheetCell&) const;
+    operator int() const;
+    operator double() const;
 
     int getIntValue() const;
     double getDoubleValue() const;

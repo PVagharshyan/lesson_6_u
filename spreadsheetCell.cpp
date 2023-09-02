@@ -67,6 +67,14 @@ bool SpreadsheetCell::operator==(const SpreadsheetCell& obj) const {
     return m_str == obj.m_str;
 }
 
+SpreadsheetCell::operator int() const {
+    return getIntValue(); 
+}
+
+SpreadsheetCell::operator double() const {
+    return getDoubleValue();
+}
+
 int SpreadsheetCell::getIntValue() const {
     return str_to_int(m_str);
 }
